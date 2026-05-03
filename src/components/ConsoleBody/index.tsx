@@ -54,13 +54,12 @@ const ConsoleBody = () => {
 ]
 
   return (
-    <div className="w-1/2 flex items-center justify-center">
-      <motion.div className="bg-secondary h-150 w-150 grid rounded-3xl shadow-(--console-shadow) inset-shadow-md" initial={{ y: -1000 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ ease: 'easeOut', duration: 0.9 }}
-        >
-        <div className="bg-display h-80 w-130 place-self-center  col-span-3 row-span-2 shadow-(--display-shadow) font-ternary text-xl overflow-auto p-6">{getCatFact?.fact ?? getDogFact?.fact ?? getUselessFact?.fact}</div>
-        <div className="bg-none col-span-3 flex justify-around align-center rounded-3xl p-6">
+    <div className="md:w-full xl:w-1/2 flex items-center justify-center">
+      <motion.div className="bg-secondary h-auto w-[90%] md:h-150 md:w-150 grid rounded-3xl shadow-(--console-shadow) inset-shadow-md" initial={{ y: -1000 }}
+                                          animate={{ opacity: 1, y: 0 }}
+                                          transition={{ ease: 'easeOut', duration: 0.9 }}>
+        <div className="bg-display h-100 w-[85%] md:h-80 md:w-130 place-self-center col-span-2 md:col-span-3 row-span-2 shadow-(--display-shadow) font-ternary text-base md:text-xl overflow-auto p-6 mt-6">{getCatFact?.fact ?? getDogFact?.fact ?? getUselessFact?.fact}</div>
+        <div className="bg-none col-span-2 md:col-span-3 flex justify-around align-center rounded-3xl lg:p-8 flex-wrap mt-4 mb-6">
           {buttonItems && buttonItems.map((item, index) => <Button key={index} name={item.name} click={item.click} icon={item.icon}/>)}
         </div>
       </motion.div>
