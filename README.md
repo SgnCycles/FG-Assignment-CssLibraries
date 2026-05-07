@@ -1,73 +1,47 @@
-# React + TypeScript + Vite
+# FG - Webb application development - Assignment 1 - CSS Libraries - Tailwind#
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction ##
+For this school assignment I have built a SPA React website to test my knowledge of TypeScript, CSS Libraries and core React fundamentals.
+The topic of the website is to explore the facts in three categories (cats, dogs and useless facts) with data fecthed from APIs.
 
-Currently, two official plugins are available:
+## Live Demo ##
+Check out my [website](https://fg-assignment-tailwind.vercel.app/).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack ##
+- HTML5
+- CSS
+- Vanilla Javascript
+- React
+- Tailwind
 
-## React Compiler
+## Used APIs##
+- [Cat facts](https://catfact.ninja/fact)
+- [Dog Facts](https://dogapi.dog/api/v2/facts)
+- [Useless Facts](https://uselessfacts.jsph.pl/api/v2/facts/random)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Project Structure ##
+- **Project root**:
+  - main.tsx (main application entry point)
+  - App.tsx (the root component of the application)
+  - package.json (project metadata and dependencies)
+  - .gitignore (files excluded from the git)
+  - index.css (global css file)
 
-## Expanding the ESLint configuration
+- **data**:
+  - data.ts (data file with continents and their coordinates)
+    
+- **public**:
+  - favicon image
+      
+- **assets**
+  - icon files
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **hooks**
+  - useGetCatFact.tsx (custom React hook that fetches data from the API)
+  - useGetDogFact.tsx (custom React hook that fetches data from the API)
+  - useGetUselessFact.tsx (custom React hook that fetches data from the API)
+    
+- **components**:
+  - Button (component for button elements for the website)
+  - ConsoleBody (component displaying a console)
+  - Footer (component for the footer section)

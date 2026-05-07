@@ -13,9 +13,11 @@
     "@react-three/fiber": "^9.6.1",
     "@shadergradient/react": "^2.4.20",
     "camera-controls": "^3.1.2",
+    "howler": "^2.2.4",
     "motion": "^12.38.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
+    "react-sounds": "^1.0.30",
     "tailwindcss": "^4.2.4",
     "three": "^0.184.0",
     "three-stdlib": "^2.36.1"
